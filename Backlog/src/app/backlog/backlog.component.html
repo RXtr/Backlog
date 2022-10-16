@@ -1,0 +1,13 @@
+<div>
+    <div *ngIf="backlog.length === 0">
+        You have no games on your backlog.
+        <a href="">add games here!</a>
+    </div>
+    <div *ngIf="backlog.length > 0">
+        <ul>
+            <li *ngFor="let game of backlog">
+                <i><strong>{{game.Title}}</strong> </i> by {{game.Developer}}
+            </li>
+        </ul>
+    </div>
+</div>
